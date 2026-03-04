@@ -18,21 +18,21 @@ export function TwoDice(): React.JSX.Element {
         <div>
             Two Dice
             <span data-testid="left-die">{diceOne}</span>
-            <button
+            <Button
                 onClick={() => {
                     setDiceOne(d6());
                 }}
             >
                 Roll Left
-            </button>
+            </Button>
             <span data-testid="right-die">{diceTwo}</span>
-            <button
+            <Button
                 onClick={() => {
                     setDiceTwo(d6());
                 }}
             >
                 Roll Right
-            </button>
+            </Button>
             <div>
                 {diceOne === 1 && diceTwo === 1 ?
                     "Lose"
