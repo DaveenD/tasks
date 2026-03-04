@@ -11,7 +11,7 @@ export function RevealAnswer(): React.JSX.Element {
     return (
         <div>
             Reveal Answer
-            <button onClick={flipVisibility}>Show/Hide Reveal Answer</button>
+            <Button onClick={flipVisibility}>Show/Hide Reveal Answer</Button>
             {!visible && <div>42</div>}
         </div>
     );
