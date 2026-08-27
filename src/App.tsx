@@ -33,7 +33,7 @@ function App(): React.JSX.Element {
                 }}
             >
                 {" "}
-                Click Me
+                Log Hello World
             </Button>
             <Container>
                 <Row>
