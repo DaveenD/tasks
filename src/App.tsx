@@ -10,73 +10,34 @@ import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): React.JSX.Element {
     return (
-        <>
-            <div className="App">
-                <header className="App-header">
-                    UD CISC275 with React Hooks and TypeScript Hello World
-                </header>
-                <p>
-                    Edit <code>src/App.tsx</code> and save. This page will
-                    automatically reload. Davin Dennis
-                </p>
-            </div>
-
-            <div>
-                <h1>Task 3</h1>
-                <img
-                    src="https://cdn-aicin.nitrocdn.com/HIAjYmsdLpRQdKpIMJLXFmZsSAYnEnkl/assets/images/optimized/rev-c2c8836/www.amitree.com/wp-content/uploads/2021/12/what-is-a-task-tracker-and-why-you-need-one.jpeg"
-                    alt="A picture with 3 columns, one labeled to do, second one in progress, and the third is labels done"
-                />
-                Ordered List:
-                <ol>
-                    <li>First Tasks</li>
-                    <li>Second Tasks</li>
-                    <li>Third Tasks</li>
-                </ol>
-            </div>
-
-            <Button
-                onClick={() => {
-                    console.log("Hello World!");
-                }}
-            >
-                Log Hello World
-            </Button>
-
-            <Container>
-                <Row>
-                    <Col>
-                        <div
-                            style={{
-                                backgroundColor: "red",
-                                width: 10,
-                                height: 10,
-                            }}
-                        ></div>
-                        First Column
-                    </Col>
-
-                    <Col>
-                        <div
-                            style={{
-                                backgroundColor: "red",
-                                width: 10,
-                                height: 10,
-                            }}
-                        ></div>
-                        Second Column
-                    </Col>
-                </Row>
-            </Container>
-
-            <hr />
+        <div className="App">
+            <header className="App-header">
+                UD CISC275 with React Hooks and TypeScript
+            </header>
+            <hr></hr>
+            <CheckAnswer expectedAnswer="42"></CheckAnswer>
+            <hr></hr>
+            <GiveAttempts></GiveAttempts>
+            <hr></hr>
+            <EditMode></EditMode>
+            <hr></hr>
+            <ChangeColor></ChangeColor>
+            <hr></hr>
+            <MultipleChoiceQuestion
+                options={["a", "b", "c"]}
+                expectedAnswer="b"
+            ></MultipleChoiceQuestion>
+            <hr></hr>
             <DoubleHalf></DoubleHalf>
-
-            <hr />
+            <hr></hr>
             <ChooseTeam></ChooseTeam>
 
             <hr />
@@ -102,7 +63,7 @@ function App(): React.JSX.Element {
 
             <hr />
             <CycleHoliday></CycleHoliday>
-        </>
+        </div>
     );
 }
 
